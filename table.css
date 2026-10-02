@@ -3,53 +3,69 @@
 
 /* Whole table */
 table.reportTable {
-          border-collapse: collapse;
+            border-collapse: collapse;
+}
+
+/* Accessibility caption showing the focused column's full name. */
+/* Default themes hide this visually; since a custom theme replaces */
+/* the default stylesheet instead of adding to it, we must hide it */
+/* ourselves. Kept available to screen readers (visually-hidden). */
+table.reportTable caption {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
 }
 
 /* Grouped header row (e.g. "Pre-lease %, to date") */
 table.reportTable thead th.headerCell.merged {
-          background-color: #dde3ea;
-          color: #1f3864;
-          font-weight: 700;
-          text-align: center !important;
-          border: 1px solid #c7cfd8;
+            background-color: #dde3ea;
+            color: #1f3864;
+            font-weight: 700;
+            text-align: center !important;
+            border: 1px solid #c7cfd8;
 }
 
 /* Field-name header row (e.g. "Actual", "Delta forecast") */
 table.reportTable thead th.headerCell:not(.merged) {
-          background-color: #ffffff;
-          color: #1f3864;
-          font-weight: 700;
-          border-bottom: 2px solid #c7cfd8;
+            background-color: #ffffff;
+            color: #1f3864;
+            font-weight: 700;
+            border-bottom: 2px solid #c7cfd8;
 }
 
 /* Center measure columns (header + data); dimension columns stay left */
 table.reportTable thead th.headerCell.measure:not(.merged) {
-          text-align: center !important;
+            text-align: center !important;
 }
 table.reportTable tbody td.rowCell.measure {
-          text-align: center !important;
+            text-align: center !important;
 }
 
 /* Regular data cells */
 table.reportTable tbody td.rowCell {
-          padding: 6px 10px;
-          font-family: Arial, sans-serif;
-          font-size: 13px;
-          background-color: #ffffff;
-          border-bottom: 1px solid #eceff2;
+            padding: 6px 10px;
+            font-family: Arial, sans-serif;
+            font-size: 13px;
+            background-color: #ffffff;
+            border-bottom: 1px solid #eceff2;
 }
 
 /* Numeric cell alignment */
 table.reportTable tbody td.rowCell.numeric {
-          font-variant-numeric: tabular-nums;
+            font-variant-numeric: tabular-nums;
 }
 
 /* Totals row */
 table.reportTable tbody td.rowCell.total {
-          font-weight: bold;
-          background-color: #f5f7fa;
-          border-top: 2px solid #c7cfd8;
+            font-weight: bold;
+            background-color: #f5f7fa;
+            border-top: 2px solid #c7cfd8;
 }
 
 /* "Unmerged" columns: a top header-row cell that is not part of */
@@ -57,13 +73,13 @@ table.reportTable tbody td.rowCell.total {
 /* by row role, not column position -- keeps working if columns */
 /* are added, removed, or reordered. */
 table.reportTable thead tr:first-child th.headerCell:not(.merged) {
-          background-color: #fdf6b2;
-          border: 1px solid #f0e2a3;
+            background-color: #fdf6b2;
+            border: 1px solid #f0e2a3;
 }
 
 /* Vertical divider between merged column groups in the top header */
 /* row. Robust: targets any group header cell that follows another, */
 /* regardless of column position or how many groups exist. */
 table.reportTable thead tr:first-child th.headerCell + th.headerCell {
-          border-left: 2px solid #c7cfd8;
+            border-left: 2px solid #c7cfd8;
 }
