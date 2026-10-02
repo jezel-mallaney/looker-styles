@@ -6,20 +6,14 @@ table.reportTable {
             border-collapse: collapse;
 }
 
-/* Accessibility caption showing the focused column's full name. */
-/* Default themes hide this visually; since a custom theme replaces */
-/* the default stylesheet instead of adding to it, we must hide it */
-/* ourselves. Kept available to screen readers (visually-hidden). */
-table.reportTable caption {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
+/* Looker's built-in column tooltip (div#tooltip) shows the focused/
+   hovered header's full name. It uses a "hidden" class to toggle
+   visibility via JS. Default themes define that class's CSS; since
+   our custom theme replaces the default stylesheet instead of
+   adding to it, we must redefine it so the tooltip stays hidden
+   until Looker explicitly shows it. */
+#tooltip.hidden {
+            display: none;
 }
 
 /* Grouped header row (e.g. "Pre-lease %, to date") */
