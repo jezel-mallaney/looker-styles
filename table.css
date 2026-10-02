@@ -28,7 +28,7 @@ table.reportTable thead th.headerCell.merged {
 
 /* Field-name header row (e.g. "Actual", "Delta forecast") */
 table.reportTable thead th.headerCell:not(.merged) {
-            background-color: #ffffff;
+            background-color: #eef1f6;
             color: #1f3864;
             font-weight: 700;
             border-bottom: 2px solid #c7cfd8;
