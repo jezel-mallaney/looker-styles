@@ -6,14 +6,15 @@ table.reportTable {
             border-collapse: collapse;
 }
 
-/* Looker's built-in column tooltip (div#tooltip) shows the focused/
-   hovered header's full name. It uses a "hidden" class to toggle
-   visibility via JS. Default themes define that class's CSS; since
-   our custom theme replaces the default stylesheet instead of
-   adding to it, we must redefine it so the tooltip stays hidden
-   until Looker explicitly shows it. */
-#tooltip.hidden {
-            display: none;
+/* Looker's built-in column tooltip (div#tooltip). On hover/click it
+   shows the focused header's full name. The default theme positions
+   it as a floating tooltip near the cursor; since our custom theme
+   replaces the default stylesheet instead of adding to it, that
+   positioning is lost and the text renders inline, pushing the
+   table down. We don't want this tooltip at all, so hide it
+   unconditionally. */
+#tooltip {
+            display: none !important;
 }
 
 /* Grouped header row (e.g. "Pre-lease %, to date") */
