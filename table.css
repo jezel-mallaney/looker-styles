@@ -9,8 +9,8 @@ table.reportTable {
 /* Grouped header row (e.g. "Pre-lease %, to date") */
 table.reportTable thead th.headerCell.merged {
       background-color: #dde3ea;
-      color: #1a1a1a;
-      font-weight: 600;
+      color: #1f3864;
+      font-weight: 700;
       text-align: center;
       border: 1px solid #c7cfd8;
 }
@@ -18,8 +18,8 @@ table.reportTable thead th.headerCell.merged {
 /* Field-name header row (e.g. "Actual", "Delta forecast") */
 table.reportTable thead th.headerCell:not(.merged) {
       background-color: #ffffff;
-      color: #1a1a1a;
-      font-weight: 600;
+      color: #1f3864;
+      font-weight: 700;
       border-bottom: 2px solid #c7cfd8;
 }
 
@@ -40,8 +40,10 @@ table.reportTable tbody td.rowCell.numeric {
 /* Totals row */
 table.reportTable tbody td.rowCell.total {
       font-weight: bold;
-      background-color: #f5f7fa;
-      border-top: 2px solid #c7cfd8;
+      background-color: #3c4a5c;
+      color: #ffffff;
+      border-top: none;
+      border-bottom: none;
 }
 
 /* "Unmerged" columns: a top header-row cell that is not part of */
