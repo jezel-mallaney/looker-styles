@@ -44,11 +44,11 @@ table.reportTable tbody td.rowCell.total {
       border-top: 2px solid #c7cfd8;
 }
 
-/* "Unmerged" columns: a group header that only spans ONE field */
-/* (colspan equals 1). Robust and automatic -- catches any     */
-/* current or future single-column group without needing       */
-/* position-based rules.                                       */
-table.reportTable thead th.headerCell.merged[colspan="1"] {
+/* "Unmerged" columns: a top header-row cell that is not part of */
+/* a real multi-column group (lacks the "merged" class). Targets */
+/* by row role, not column position -- keeps working if columns */
+/* are added, removed, or reordered. */
+table.reportTable thead tr:first-child th.headerCell:not(.merged) {
       background-color: #fdf6b2;
       border: 1px solid #f0e2a3;
 }
