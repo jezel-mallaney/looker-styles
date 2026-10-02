@@ -1,0 +1,45 @@
+/* Looker Table (Report) custom styling */
+/* Targets Looker's reportTable DOM structure */
+
+/* Whole table */
+table.reportTable {
+    border-collapse: collapse;
+}
+
+/* Grouped header row (e.g. "Pre-lease %, to date") */
+table.reportTable thead th.headerCell.merged {
+    background-color: #dde3ea;
+    color: #1a1a1a;
+    font-weight: 600;
+    text-align: center;
+    border: 1px solid #c7cfd8;
+}
+
+/* Field-name header row (e.g. "Actual", "Δ forecast") */
+table.reportTable thead th.headerCell:not(.merged) {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    font-weight: 600;
+    border-bottom: 2px solid #c7cfd8;
+}
+
+/* Regular data cells */
+table.reportTable tbody td.rowCell {
+    padding: 6px 10px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eceff2;
+}
+
+/* Numeric cell alignment */
+table.reportTable tbody td.rowCell.numeric {
+    font-variant-numeric: tabular-nums;
+}
+
+/* Totals row */
+table.reportTable tbody td.rowCell.total {
+    font-weight: bold;
+    background-color: #f5f7fa;
+    border-top: 2px solid #c7cfd8;
+}
