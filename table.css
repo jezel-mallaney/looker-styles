@@ -4,6 +4,7 @@
 /* Whole table */
 table.reportTable {
             border-collapse: collapse;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
 /* Looker's built-in column tooltip (div#tooltip). On hover/click it
@@ -45,7 +46,6 @@ table.reportTable tbody td.rowCell.measure {
 /* Regular data cells */
 table.reportTable tbody td.rowCell {
             padding: 6px 10px;
-            font-family: Arial, sans-serif;
             font-size: 13px;
             background-color: #ffffff;
             border-bottom: 1px solid #eceff2;
