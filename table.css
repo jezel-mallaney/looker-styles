@@ -84,7 +84,7 @@ table.reportTable thead tr:first-child th.headerCell + th.headerCell {
 table.reportTable {
             border-collapse: separate;
             border-spacing: 0;
-            --hdr-row1-height: 30px;
+            --hdr-row1-height: 36px;
 }
 
 /* Top header row (group names + unmerged columns) */
