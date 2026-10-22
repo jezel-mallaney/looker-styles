@@ -87,17 +87,10 @@ table.reportTable {
             --hdr-row1-height: 36px;
 }
 
-/* Top header row (group names + unmerged columns) */
-table.reportTable thead tr:first-child th.headerCell {
+/* Header rows (group names + field names) pinned together as one block */
+table.reportTable thead {
             position: sticky;
             top: 0;
-            z-index: 3;
-}
-
-/* Second header row (field names) sits directly under the first */
-table.reportTable thead tr:nth-child(2) th.headerCell {
-            position: sticky;
-            top: var(--hdr-row1-height);
             z-index: 3;
 }
 
