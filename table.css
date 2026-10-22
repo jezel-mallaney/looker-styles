@@ -78,3 +78,32 @@ table.reportTable thead tr:first-child th.headerCell:not(.merged) {
 table.reportTable thead tr:first-child th.headerCell + th.headerCell {
             border-left: 2px solid #c7cfd8;
 }
+
+
+/* Freeze header rows and totals row while scrolling */
+table.reportTable {
+            border-collapse: separate;
+            border-spacing: 0;
+            --hdr-row1-height: 30px;
+}
+
+/* Top header row (group names + unmerged columns) */
+table.reportTable thead tr:first-child th.headerCell {
+            position: sticky;
+            top: 0;
+            z-index: 3;
+}
+
+/* Second header row (field names) sits directly under the first */
+table.reportTable thead tr:nth-child(2) th.headerCell {
+            position: sticky;
+            top: var(--hdr-row1-height);
+            z-index: 3;
+}
+
+/* Totals row pinned to the bottom of the visible table */
+table.reportTable tbody td.rowCell.total {
+            position: sticky;
+            bottom: 0;
+            z-index: 2;
+}
