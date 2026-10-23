@@ -102,10 +102,6 @@ table.reportTable tbody td.rowCell.total {
 }
 
 
-/* Black/Red measure style: color by sign */
-table.reportTable tbody td.rowCell.black_red.negative {
-            color: #c0392b;
-}
-table.reportTable tbody td.rowCell.black_red.positive {
-            color: #1e8449;
-}
+/* Black/Red measure style: green by default (positive/zero), red for negative */
+table.reportTable tbody td.rowCell.black_red { color: #1e8449; }
+table.reportTable tbody td.rowCell.black_red.negative { color: #c0392b; }
